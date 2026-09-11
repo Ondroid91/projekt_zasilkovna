@@ -1,0 +1,87 @@
+﻿@using Domain.Entities
+@model IEnumerable<Package>
+
+@{
+    ViewData["Title"] = "Moje balíčky";
+    var hasPackages = ViewBag.HasPackages ?? false;
+}
+
+<div class="container mt-4">
+    <h2>📦 Odesílání balíčku</h2>
+
+    @if (!hasPackages)
+    {
+        <p>Nemáte žádné balíčky k odeslání.</p>
+    }
+    else
+    {
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Název</th>
+                    <th>Váha (kg)</th>
+                    <th>Odesílací adresa</th>
+                    <th>Doručovací adresa</th>
+                    <th>Stav</th>
+                    <th>Současné místo</th>
+                    <th>Depo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@p.Weight.ToString("F2")</td>
+                        <td>@($"{p.PickupAddress?.Street}, {p.PickupAddress?.City}, {p.PickupAddress?.Zipcode}")</td>
+                        <td>@($"{p.DeliveryAddress?.Street}, {p.DeliveryAddress?.City}, {p.DeliveryAddress?.Zipcode}")</td>
+                        <td>
+                            @{
+                                string statusCz = p.Status switch
+                                {
+                                    "created" => "Vytvořeno",
+                                    "to_pickup" => "K vyzvednutí",
+                                    "stored" => "Uskladněno",
+                                    "in_delivery" => "V doručení",
+                                    "delivered" => "Doručeno",
+                                    "canceled" => "Zrušeno",
+                                    _ => p.Status
+                                };
+                            }
+                            @statusCz
+                        </td>
+                        <td>
+                            @(p.Storage != null ? $"{p.Storage.Name}" : "Nepřiřazeno")
+                        </td>
+                        <td>
+                            @if (p.Storage != null && p.Status != "canceled")
+                            {
+                                <form asp-action="AssignStorageDepo" method="post" class="d-inline">
+                                    <input type="hidden" name="packageId" value="@p.Id" />
+                                    <select name="storageId" class="form-select form-select-sm" required>
+                                        <option value="">-- Vyber depo --</option>
+                                        @foreach (var dp in (IEnumerable<Storage>)ViewBag.Storages)
+                                        {
+                                            <option value="@dp.Id">@dp.Name</option>
+                                        }
+                                    </select>
+                                    <button type="submit" class="btn btn-success btn-sm mt-1">Přiřadit</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <span class="text-muted">
+                                    @(p.Storage != null ? p.Storage.Name : "Nepřiřazeno")
+                                </span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="mt-4">
+        <a asp-area="User" asp-controller="User" asp-action="Warehouseman" class="btn btn-secondary">Zpět</a>
+    </div>
+</div>

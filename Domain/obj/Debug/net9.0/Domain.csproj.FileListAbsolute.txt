@@ -1,0 +1,33 @@
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\bin\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\projekt\Projekt\Domain\obj\Debug\net9.0\ref\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\bin\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\ref\Domain.dll
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\bin\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.dll
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Users\ondra\Desktop\Projekt_zasilkovna\Projekt\Domain\obj\Debug\net9.0\ref\Domain.dll

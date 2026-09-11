@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Skladník - panel";
+    var username = Context.Session.GetString("Username") ?? "Warehouseman";
+
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-3">Vítejte, @username!</h1>
+        <p class="lead">Toto je panel skladníka. Přijímejte nové zásilky a připravujte je k expedici.</p>
+    </div>
+
+    <div class="row text-center g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">📦 Přijaté zásilky</h5>
+                    <p class="card-text">Evidujte zásilky, které byly doručeny do skladu.</p>
+                    <a asp-area="Warehouseman" asp-controller="Warehouseman" asp-action="StorePackage" class="btn btn-primary">
+                        Zobrazit
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-info">
+                <div class="card-body">
+                    <h5 class="card-title">🚛 Expedice zásilek</h5>
+                    <p class="card-text">Připravte zásilky k odeslání kurýrům.</p>
+                    <a asp-area ="Warehouseman" asp-controller="Warehouseman" asp-action="SendPackage" class="btn btn-primary">
+                        Zobrazit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

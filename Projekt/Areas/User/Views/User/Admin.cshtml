@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Admin panel";
+    var username = Context.Session.GetString("Username") ?? "Administrátore";
+}
+
+<div class="container mt-5 d-flex flex-column align-items-center">
+    <div class="text-center mb-5">
+        <h1 class="display-3">Vítejte, @username!</h1>
+        <p class="lead">Toto je administrační panel. Zde můžete spravovat zásilky, zákazníky a nastavení systému.</p>
+    </div>
+
+    <div class="row justify-content-center text-center g-4 w-100">
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-danger">
+                <div class="card-body">
+                    <h5 class="card-title">👤 Správa uživatelů</h5>
+                    <p class="card-text">Přidávejte, upravujte nebo odebírejte zákazníky a doručovatele.</p>
+                    <a asp-area="Admin" asp-controller="Admin" asp-action="ManageUsers" class="btn btn-danger">Spravovat uživatele</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center text-center g-4 w-100">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 border-danger">
+                    <div class="card-body">
+                        <h5 class="card-title">Správa adres</h5>
+                        <p class="card-text">Přidávejte, upravujte nebo odebírejte adresy.</p>
+                        <a asp-area="Admin" asp-controller="Admin" asp-action="ManageAddress" class="btn btn-danger">Spravovat adresy</a>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">📦 Správa zásilek</h5>
+                    <p class="card-text">Kontrolujte, přiřazujte a sledujte všechny zásilky v systému.</p>
+                        <a asp-area="Admin" asp-controller="Admin" asp-action="ManagePackage" class="btn btn-danger">Spravovat balíčky</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Přihlášení";
+}
+
+<h2 class="text-center mb-4">Přihlášení</h2>
+
+@if (!ViewData.ModelState.IsValid && ViewData.ModelState.Values.Any(v => v.Errors.Count > 0))
+{
+    @Html.ValidationSummary(false, "", new { @class = "alert alert-danger text-center" })
+}
+
+
+<form asp-controller="Account" asp-action="Login" method="post" class="w-50 mx-auto">
+    <div class="mb-3">
+        <label for="username" class="form-label">Jméno</label>
+        <input type="text" class="form-control" name="username" required />
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Heslo</label>
+        <input type="password" class="form-control" name="password" required />
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Přihlásit</button>
+</form>

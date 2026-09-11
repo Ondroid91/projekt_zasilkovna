@@ -1,0 +1,14 @@
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Application\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Infrastracture\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Application\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Infrastracture\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Application\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Infrastracture\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Application\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Domain\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ondra\Desktop\skola\3.ZS\Pokročilé webové technologie\zasilkovna - projekt\Projekt\Infrastracture\obj\Debug\net9.0\staticwebassets.build.json

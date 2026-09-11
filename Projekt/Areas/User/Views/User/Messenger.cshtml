@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Kurýr - panel";
+    var username = Context.Session.GetString("Username") ?? "Messenger";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-3">Vítejte, @username!</h1>
+        <p class="lead">Toto je panel kurýra. Zde najdete objednávky k vyzvednutí a k doručení.</p>
+    </div>
+
+    <div class="row text-center g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">📦 Objednávky k vyzvednutí</h5>
+                    <p class="card-text">Seznam objednávek, které čekají na vyzvednutí ve skladu.</p>
+                    <a asp-area="Messenger" asp-controller="Messenger" asp-action="PickupPackage" class="btn btn-primary">
+                        Zobrazit
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-success">
+                <div class="card-body">
+                    <h5 class="card-title">🚚 Objednávky k doručení</h5>
+                    <p class="card-text">Seznam objednávek, které máte doručit zákazníkům.</p>
+                    <a asp-area="Messenger" asp-controller="Messenger" asp-action="DeliverPackage" class="btn btn-success">
+                        Zobrazit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

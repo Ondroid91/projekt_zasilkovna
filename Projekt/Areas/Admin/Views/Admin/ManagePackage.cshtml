@@ -1,0 +1,121 @@
+﻿@using Domain.Entities
+@model IEnumerable<Package>
+
+@{
+    ViewData["Title"] = "Moje balíčky";
+    var hasPackages = ViewBag.HasPackages ?? false;
+    var warehouses = ViewBag.Warehouses as IEnumerable<Warehouse> ?? Enumerable.Empty<Warehouse>();
+    var messengers = ViewBag.Messengers as IEnumerable<User> ?? Enumerable.Empty<User>();
+}
+
+<div class="container mt-4">
+    <h2>📦 Balíčky k doručení</h2>
+
+    @if (!hasPackages)
+    {
+        <p>Nemáte žádné balíčky.</p>
+    }
+    else
+    {
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Název</th>
+                    <th>Váha (kg)</th>
+                    <th>Odesílací adresa</th>
+                    <th>Doručovací adresa</th>
+                    <th>Stav</th>
+                    <th>Skladiště</th>
+                    <th>Kurýr</th>
+                    <th>Zrušit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@p.Weight.ToString("F2")</td>
+                        <td>@($"{p.PickupAddress?.Street}, {p.PickupAddress?.City}, {p.PickupAddress?.Zipcode}")</td>
+                        <td>@($"{p.DeliveryAddress?.Street}, {p.DeliveryAddress?.City}, {p.DeliveryAddress?.Zipcode}")</td>
+                        <td>
+                            @{
+                                string statusCz = p.Status switch
+                                {
+                                    "created" => "Vytvořeno",
+                                    "to_pickup" => "K vyzvednutí",
+                                    "stored" => "Uskladněno",
+                                    "in_delivery" => "V doručení",
+                                    "delivered" => "Doručeno",
+                                    "canceled" => "Zrušeno",
+                                    _ => p.Status
+                                };
+                            }
+                            @statusCz
+                        </td>
+                        <td>
+                            @if (p.StorageAddress == null && p.Status != "canceled")
+                            {
+                                <form asp-action="AssignWarehouse" method="post" class="d-inline">
+                                    <input type="hidden" name="packageId" value="@p.Id" />
+
+                                    <select name="warehouseId" class="form-select form-select-sm">
+                                        <option value="">-- Vyber skladiště --</option>
+                                        @foreach (var wh in warehouses)
+                                        {
+                                            <option value="@wh.Id">@wh.Name</option>
+                                        }
+                                    </select>
+
+                                    <button type="submit" class="btn btn-success btn-sm">Přiřadit</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <select class="form-select form-select-sm" disabled>
+                                    <option>@(p.Warehouse?.Name ?? "Nepřiřazeno")</option>
+                                </select>
+                            }
+                        </td>
+
+                        <td>
+                            @if (p.Messenger == null && p.Status != "canceled")
+                            {
+                                <form asp-action="AssignMessenger" method="post" class="d-inline">
+                                    <input type="hidden" name="packageId" value="@p.Id" />
+                                    <select name="messengerId" class="form-select form-select-sm">
+                                        <option value="">-- Vyber messengera --</option>
+                                        @foreach (var m in messengers)
+                                        {
+                                            <option value="@m.Id">@m.Name</option>
+                                        }
+                                    </select>
+                                    <button type="submit" class="btn btn-success btn-sm">Přiřadit</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <select class="form-select form-select-sm" disabled>
+                                    <option>@(p.Messenger?.Name ?? "Nepřiřazeno")</option>
+                                </select>
+                            }
+                        </td>
+                        <td>
+                            @if (p.Status != "canceled")
+                            {
+                                <form asp-action="CancelPackage" method="post" class="d-inline">
+                                    <input type="hidden" name="packageId" value="@p.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Zrušit</button>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="mt-4">
+        <a asp-area="User" asp-controller="User" asp-action="Admin" class="btn btn-secondary">Zpět</a>
+    </div>
+</div>

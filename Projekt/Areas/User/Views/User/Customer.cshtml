@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Customer";
+    var username = Context.Session.GetString("Username");
+}
+
+<div class="container mt-5 d-flex flex-column align-items-center">
+    <div class="text-center mb-5">
+        <h1 class="display-3">Vítejte, @username!</h1>
+        <p class="lead">Rychlé a spolehlivé doručování balíků po celé ČR.</p>
+    </div>
+
+    <div class="row justify-content-center text-center g-4 w-100">
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">📦 Vytvořit zásilku</h5>
+                    <p class="card-text">Objednej odeslání nové zásilky.</p>
+                    <a asp-area="Customer" asp-controller="Customer" asp-action="CreatePackage" class="btn btn-danger">Nová zásilka</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 border-success">
+                <div class="card-body">
+                    <h5 class="card-title">🔍 Sledovat zásilku</h5>
+                    <p class="card-text">Zkontroluj stav a polohu balíku.</p>
+                    <a asp-area="Customer" asp-controller="Customer" asp-action="ViewPackage" class="btn btn-danger">Sledovat zásilku</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
